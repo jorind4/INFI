@@ -7,10 +7,12 @@ public class scanner {
         Scanner scanner = new Scanner(System.in);
         int auswahl =0;
         int i = 0;
+        scanner.nextInt();
+
         do{
             System.out.print("Bitte den Wert eingeben:");
             auswahl = scanner.nextInt();
-            System.out.println("Hier kommt der Wert:");
-        }
+            System.out.println("Hier kommt der Wert:"+ auswahl);
+        }while ();
     }
 }
