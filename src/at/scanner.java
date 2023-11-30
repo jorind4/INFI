@@ -7,7 +7,7 @@ public class scanner {
     {
         Scanner scanner = new Scanner(System.in);
         double kontostand =0.0;
-        int auswahl =0;
+        double auswahl =0.0;
         int input =0;
         int i = 0;
        
@@ -23,16 +23,17 @@ public class scanner {
 
         int option = input;
 
+
         switch (option) {
             case 1:
                 System.out.print("Geben Sie den Einzahlungsbetrag ein: ");
-                double auswahl = scanner.nextDouble();
-            {double kontostand = auswahl;
+                auswahl = scanner.nextDouble();
+            {kontostand += auswahl;
                 System.out.println("Einzahlung erfolgreich!");}
                 break;
             case 2:
                 System.out.print("Geben Sie den Abhebungsbetrag ein: ");
-                double auswahl = input;
+                auswahl = input;
                 if (auswahl > kontostand) {
                     System.out.println("Nicht genügend Guthaben auf dem Konto.");
                 } else {
