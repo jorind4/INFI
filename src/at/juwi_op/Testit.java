@@ -10,7 +10,7 @@ public class Testit {
         Katze katze = new Katze();
         String[] charListe ={"bösartig", "lieb", "verspielt", "verschmust", "listig", "drollig"};
         String[] oberfliste ={"flauschig", "nackt", "kurzhaarig", "samtig", "weich", "struppig"};
-        String[] nameliste ={"josef", "anton", "lina", "emmy", "tommy", "happy", "joy", "sunny", "felix"};
+        String[] nameliste ={"Josef", "Anton", "Lina", "Emmy", "Tommy", "Happy", "Joy", "Sunny", "Felix", "Elias", "Elija"};
         String[] farbliste ={"schwarz", "grau", "dreifärbig", "weiß", "getigert", "braun"};
 
         for(int i=0; i<=100; i++) {
@@ -32,10 +32,22 @@ public class Testit {
         Katze katze2 = new Katze("aufgedreht", "kurzhaar", 1, "dreifarbig", "Lina");
         mKatzenliste.add(katze2);
 
+        Haus haus = new Haus(350, "baumgarten 19a, 6858 Bildstein", 8, 5,5,);
+        haus.getInfo();
+        haus.addKatze (katze2);
+        haus.getKatzenImHaus();
+        haus.getMaxAlter();
         //System.out.println("Meine Kater "+katze.getName() + " ist " + katze.getAlter() + " Jahre alt!");
+
+
 
         for(Katze k: mKatzenliste){
             System.out.println("Meine Katze "+k.getName() + " ist " + k.getAlter() + " Jahre alt! Sie ist "+k.getCharakter()+ " und " +k.getOberflaechenbeschaffenheit());
+
+            haus.addKatze(k);
+
         }
+
+        haus.getKatzenImHaus();
     }
 }
