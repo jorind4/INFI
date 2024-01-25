@@ -43,22 +43,25 @@ public class Haus {
         this.anzahlZimmer = anzahlZimmer;
     }
 
-    public void getInfo(){
-        System.out.println("Adresse: " + this.adresse +"\nFlaeche: " + this.flaeche + "\nAnzahl der Zimmer: "+ this.anzahlZimmer);
+    public void getInfo() {
+        System.out.println("Adresse: " + this.adresse + "\nFlaeche: " + this.flaeche + "\nAnzahl der Zimmer: " + this.anzahlZimmer);
     }
 
     public void addKatze(Katze katze) {
-        if (katzenListe.size() > this.maxKatzenimHaus){
-            System.out.println("Die Chefin will nicht mehr als " + this.maxKatzenimHaus + " Katze im Haus!!");
+        if (katzenListe.size() >= this.maxKatzenimHaus) {
+            System.out.println("Die Chefin will nicht mehr als " + this.maxKatzenimHaus + " Katzen im Haus!!");
+        } else if (katze.getAlter() > this.maxAlter) {
+            System.out.println("Die Katze ist zu alt für dieses Haus!!");
+        } else {
+            katzenListe.add(katze);
+            System.out.println("Katze hinzugefügt!");
         }
-        if (katzenListe.size >= this.maxAlter)
-        else {
-        katzenListe.add(katze);
-    }}
+    }
 
-    public void getKatzenImHaus(){
-        for (Katze k : katzenListe)
+    public void getKatzenImHaus() {
+        for (Katze k : katzenListe) {
             k.getInfo();
+        }
     }
 
     public int getMaxKatzenimHaus() {
